@@ -364,32 +364,6 @@
             </objects>
             <point key="canvasLocation" x="138.40000000000001" y="116.49175412293854"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="eZG-JG-P1t">
-            <objects>
-                <viewController id="d6s-g9-5Ih" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="CkI-Zx-D0g">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="68w-zt-8HI">
-                                <rect key="frame" x="0.0" y="62" width="375" height="605"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="Nln-Da-Dup" firstAttribute="bottom" secondItem="68w-zt-8HI" secondAttribute="bottom" id="Mka-se-HWx"/>
-                            <constraint firstItem="Nln-Da-Dup" firstAttribute="trailing" secondItem="68w-zt-8HI" secondAttribute="trailing" id="gQ2-w7-8k9"/>
-                            <constraint firstItem="68w-zt-8HI" firstAttribute="leading" secondItem="Nln-Da-Dup" secondAttribute="leading" id="ogi-Fo-IwS"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="Nln-Da-Dup"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HU0-lx-mij" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="981.60000000000002" y="158.77061469265368"/>
-        </scene>
     </scenes>
     <resources>
         <image name="camera" width="54" height="47"/>
