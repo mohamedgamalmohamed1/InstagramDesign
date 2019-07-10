@@ -1,14 +1,14 @@
 //
-//  InstagramCell.swift
+//  TableViewCell.swift
 //  InstagramApp
 //
-//  Created by mohamed gamal mohamed on 7/10/19.
+//  Created by mohamed gamal mohamed on 7/8/19.
 //  Copyright © 2019 mohamed gamal mohamed. All rights reserved.
 //
 
 import UIKit
 
-class InstagramCell: UITableViewCell {
+class TableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,5 +20,5 @@ class InstagramCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
 }
