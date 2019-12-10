@@ -22,6 +22,7 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
     
 }
 
+
 extension ViewController {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -33,14 +34,16 @@ extension ViewController {
         {
             let cell = tableView.dequeueReusableCell(withIdentifier: "instagramCell", for: indexPath) as! InstagramCell
             cell.imgContenet.image = carsPics[indexPath.row - 1]
-            if (indexPath.row == 2){
-                cell.imgContenet.backgroundColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
-            }
-            else if (indexPath.row == 3){
-                cell.imgContenet.backgroundColor = #colorLiteral(red: 0.05882352963, green: 0.180392161, blue: 0.2470588237, alpha: 1)
-            }
+            
+
              return cell
         }
+        //            if (indexPath.row == 2){
+        //                cell.imgContenet.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        //            }
+        //            else if (indexPath.row == 3){
+        //                cell.imgContenet.backgroundColor = #colorLiteral(red: 0.05882352963, green: 0.180392161, blue: 0.2470588237, alpha: 1)
+        //            }
         
     }
     
@@ -59,7 +62,8 @@ extension ViewController {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath) as! InstagramCell
+        let cell = tableView.dequeueReusableCell(withIdentifier:"instagramCell") as! InstagramCell
+
         print("It's Your Car")
     }
     
@@ -73,6 +77,13 @@ extension ViewController {
             tableView.beginUpdates()
             tableView.deleteRows(at: [indexPath], with: .middle)
             tableView.endUpdates()
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let index = self.tableView.indexPathForSelectedRow{
+            self.tableView.deselectRow(at: index, animated: true)
         }
     }
 }
