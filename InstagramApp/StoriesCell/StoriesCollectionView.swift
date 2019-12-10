@@ -19,28 +19,24 @@ class StoriesCollectionView: UITableViewCell , UICollectionViewDelegate , UIColl
     override func awakeFromNib() {
         super.awakeFromNib()
         
-    
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal//.vertical
-        layout.itemSize = cellSize
-        layout.sectionInset = UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1)
-        layout.minimumLineSpacing = 40.0
-        layout.minimumInteritemSpacing = 1.0
-        collectionView.setCollectionViewLayout(layout, animated: true)
-
+        storiesCollectionViewStyle ()
+        
         collectionView.reloadData()
-
     }
+}
+
+    extension StoriesCollectionView {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "storiesCell", for: indexPath) as! storiesCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "storiesCell", for: indexPath) as! StoriesCell
         cell.imageViewStories.image = storyImages[indexPath.row]
     
         return cell
     }
+        
   
     func collectionView(collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
@@ -50,10 +46,21 @@ class StoriesCollectionView: UITableViewCell , UICollectionViewDelegate , UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 7
+        
+        return storyImages.count
     }
-    
 
-   
+}
 
+extension StoriesCollectionView {
+    func storiesCollectionViewStyle (){
+        
+        let layout = UICollectionViewFlowLayout()
+         layout.scrollDirection = .horizontal//.vertical
+         layout.itemSize = cellSize
+         layout.sectionInset = UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1)
+         layout.minimumLineSpacing = 40.0
+         layout.minimumInteritemSpacing = 1.0
+         collectionView.setCollectionViewLayout(layout, animated: true)
+    }
 }

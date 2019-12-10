@@ -2,7 +2,7 @@
 //  TableViewCell.swift
 //  InstagramApp
 //
-//  Created by mohamed gamal mohamed on 7/8/19.
+//  Created by mohamed gamal mohamed on 7/10/19.
 //  Copyright © 2019 mohamed gamal mohamed. All rights reserved.
 //
 
